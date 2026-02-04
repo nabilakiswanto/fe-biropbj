@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 195 83% 39%; /* #1193b5 */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 190 73% 75%; /* #95ddeb */
+    --secondary-foreground: 240 5.9% 10%;
+
+    --accent: 36 60% 53%; /* #c3924d */
+    --accent-foreground: 0 0% 98%;
+
+    --accent2: 17 59% 85%; /* #ead4c9 */
+    --accent2-foreground: 240 5.9% 10%;
+
+    --accent3: 350 43% 46%; /* #a84353 */
+    --accent3-foreground: 0 0% 98%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 195 83% 39%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 195 83% 39%; /* #1193b5 */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 190 73% 75%; /* #95ddeb */
+    --secondary-foreground: 240 5.9% 10%;
+
+    --accent: 36 60% 53%; /* #c3924d */
+    --accent-foreground: 0 0% 98%;
+
+    --accent2: 17 59% 85%; /* #ead4c9 */
+    --accent2-foreground: 240 5.9% 10%;
+
+    --accent3: 350 43% 46%; /* #a84353 */
+    --accent3-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 195 83% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for prose content */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply text-primary font-bold;
+}
+
+.prose a {
+  @apply text-primary hover:text-primary/80 transition-colors;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-4;
+}
+
